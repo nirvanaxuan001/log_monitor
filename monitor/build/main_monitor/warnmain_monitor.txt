@@ -1,0 +1,239 @@
+missing module named 'PySide.QtCore' - imported by C:\Python27\lib\site-packages\pyinstaller-3.2.1-py2.7.egg\PyInstaller\loader\rthooks\pyi_rth_qt4plugins.py
+missing module named org - imported by copy
+missing module named console - imported by pyreadline.console.ansi
+missing module named startup - imported by pyreadline.keysyms.common, pyreadline.keysyms.keysyms
+missing module named System - imported by pyreadline.console.ironpython_console, pyreadline.keysyms.ironpython_keysyms, pyreadline.rlmain, IPython.utils._process_cli, IPython.utils.traitlets
+missing module named _scproxy - imported by urllib, future.backports.urllib.request
+missing module named EasyDialogs - imported by getpass
+missing module named termios - imported by getpass, tty, IPython.external.pexpect._pexpect, IPython.core.page
+missing module named pwd - imported by posixpath, getpass, webbrowser, shutil, tarfile, distutils.util, distutils.archive_util, CGIHTTPServer, IPython.external.path._path, docutils.frontend
+missing module named SOCKS - imported by ftplib
+missing module named rourl2path - imported by urllib
+missing module named IronPythonConsole - imported by pyreadline.console.ironpython_console
+missing module named clr - imported by pyreadline.console.ironpython_console, pyreadline.clipboard.ironpython_clipboard, nose.suite, IPython.utils._process_cli
+missing module named 'System.Windows' - imported by pyreadline.clipboard.ironpython_clipboard
+missing module named vms_lib - imported by platform
+missing module named 'java.lang' - imported by platform, xml.sax._exceptions
+missing module named java - imported by platform
+missing module named _xmlplus - imported by xml
+missing module named 'Carbon.File' - imported by plistlib
+missing module named 'Carbon.Files' - imported by plistlib
+missing module named Carbon - imported by plistlib
+missing module named MacOS - imported by platform
+missing module named macresource - imported by MacOS
+missing module named gestalt - imported by platform
+missing module named unittest._WritelnDecorator - imported by unittest, nose.plugins.multiprocess
+missing module named 'org.python' - imported by pickle, setuptools.sandbox, xml.sax
+missing module named fcntl - imported by tempfile, subprocess, tornado.platform.posix, pty, IPython.external.pexpect._pexpect, zmq.eventloop.minitornado.platform.posix, paramiko.agent
+missing module named riscosenviron - imported by os
+missing module named riscospath - imported by os
+missing module named riscos - imported by os
+missing module named ce - imported by os
+missing module named _emx_link - imported by os
+missing module named os2 - imported by os
+missing module named posix - imported by os
+missing module named resource - imported by posix, IPython.external.pexpect._pexpect, profile, IPython.utils.timing
+missing module named _sysconfigdata - imported by distutils.sysconfig, sysconfig
+missing module named grp - imported by shutil, tarfile, distutils.archive_util
+missing module named pyimod03_importers - imported by C:\Python27\lib\site-packages\pyinstaller-3.2.1-py2.7.egg\PyInstaller\loader\rthooks\pyi_rth_pkgres.py
+missing module named 'pkg_resources.extern.pyparsing' - imported by pkg_resources._vendor.packaging.requirements, pkg_resources._vendor.packaging.markers
+missing module named ordereddict - imported by backports.configparser.helpers, singledispatch_helpers, pkg_resources._vendor.pyparsing
+missing module named _thread.RLock - imported by _thread, pkg_resources._vendor.pyparsing
+missing module named _thread.interrupt_main - imported by _thread, IPython.kernel.zmq.parentpoller
+missing module named _thread.allocate_lock - imported by _thread, cffi.lock
+missing module named _thread.get_ident - imported by _thread, future.backports.misc, backports.configparser.helpers, singledispatch_helpers
+missing module named 'pkg_resources.extern.six' - imported by pkg_resources._vendor.packaging.requirements
+missing module named 'com.sun' - imported by pkg_resources._vendor.appdirs
+missing module named com - imported by pkg_resources._vendor.appdirs
+missing module named 'importlib.machinery' - imported by pkg_resources, cffi.verifier, IPython.core.completerlib
+missing module named 'urllib.parse' - imported by pkg_resources, matplotlib.textpath, setuptools.compat, tornado.escape, tornado.httputil, tornado.web, tornado.simple_httpclient, tornado.websocket, IPython.core.extensions, IPython.html.nbextensions, IPython.lib.display, numpy.lib._datasource
+missing module named _imp - imported by pkg_resources
+missing module named numpy.linalg.inv - imported by numpy.linalg, numpy.matrixlib.defmatrix, matplotlib.transforms, numpy.lib.polynomial
+missing module named _xmlrpclib - imported by xmlrpclib
+missing module named _dummy_threading - imported by dummy_threading
+missing module named IronPython - imported by nose.suite
+missing module named six.moves.range - imported by six.moves, unittest2.case
+missing module named builtins.bool - imported by builtins, numpy.core.numerictypes, numpy.lib._iotools, numpy
+missing module named builtins.complex - imported by builtins, numpy.core.numerictypes, numpy.lib._iotools, numpy
+missing module named builtins.float - imported by builtins, numpy.core.numerictypes, numpy.lib._iotools, numpy
+missing module named 'dbm.ndbm' - imported by future.moves.dbm.ndbm
+missing module named gdbm - imported by anydbm, future.moves.dbm.gnu
+missing module named 'dbm.gnu' - imported by future.moves.dbm.gnu
+missing module named 'dbm.dumb' - imported by future.moves.dbm.dumb
+missing module named bsddb3 - imported by bsddb
+missing module named _pybsddb - imported by bsddb, bsddb.db
+missing module named dbm - imported by future.standard_library, future.moves.dbm, whichdb, anydbm, future.moves.dbm.ndbm
+missing module named 'test.test_support' - imported by future.moves.test.support
+missing module named 'test.support' - imported by future.moves.test.support
+missing module named 'PySide.QtGui' - imported by enaml.qt.QtGui
+missing module named PySide - imported by enaml.qt, matplotlib.backends.qt_compat
+missing module named _datetime - imported by future.backports.datetime
+missing module named reprlib.recursive_repr - imported by reprlib, future.backports.misc
+missing module named numpy.core.number - imported by numpy.core, numpy.testing.utils
+missing module named numpy.core.around - imported by numpy.core, numpy.testing.utils
+missing module named numpy.core.float_ - imported by numpy.core, numpy.testing.utils
+missing module named numpy.core.result_type - imported by numpy.core, numpy.testing.utils
+missing module named numpy.core.inf - imported by numpy.core, numpy.testing.utils
+missing module named numpy.core.any - imported by numpy.core, numpy.testing.utils
+missing module named numpy.core.isscalar - imported by numpy.core, numpy.testing.utils, numpy.lib.polynomial
+missing module named numpy.core.signbit - imported by numpy.core, numpy.testing.utils
+missing module named numpy.core.float64 - imported by numpy.core, numpy.testing.utils
+missing module named numpy.core.isinf - imported by numpy.core, numpy.testing.utils
+missing module named numpy.core.isnan - imported by numpy.core, numpy.testing.utils
+missing module named numpy.core.float32 - imported by numpy.core, numpy.testing.utils
+missing module named numpy.core.array_repr - imported by numpy.core, numpy.testing.utils
+missing module named numpy.core.integer - imported by numpy.core, numpy.fft.helper
+missing module named numpy.core.arange - imported by numpy.core, numpy.fft.helper, numpy.testing.utils
+missing module named numpy.core.concatenate - imported by numpy.core, numpy.fft.helper
+missing module named numpy.core.conjugate - imported by numpy.core, numpy.fft.fftpack
+missing module named numpy.core.swapaxes - imported by numpy.core, numpy.fft.fftpack
+missing module named numpy.core.take - imported by numpy.core, numpy.fft.fftpack, numpy.fft.helper
+missing module named numpy.core.shape - imported by numpy.core, numpy.fft.fftpack
+missing module named numpy.core.dot - imported by numpy.core, numpy.linalg.linalg, numpy.lib.polynomial
+missing module named numpy.core.isfinite - imported by numpy.core, numpy.linalg.linalg, numpy.testing.utils
+missing module named numpy.core.finfo - imported by numpy.core, numpy.linalg.linalg, numpy.lib.polynomial
+missing module named numpy.core.Inf - imported by numpy.core, numpy.linalg.linalg
+missing module named numpy.core.geterrobj - imported by numpy.core, numpy.linalg.linalg
+missing module named numpy.core.newaxis - imported by numpy.core, numpy.linalg.linalg
+missing module named numpy.core.maximum - imported by numpy.core, numpy.linalg.linalg
+missing module named numpy.core.double - imported by numpy.core, numpy.linalg.linalg
+missing module named numpy.core.amin - imported by numpy.core, numpy.linalg.linalg
+missing module named numpy.core.amax - imported by numpy.core, numpy.linalg.linalg
+missing module named numpy.core.complexfloating - imported by numpy.core, numpy.linalg.linalg
+missing module named numpy.core.multiply - imported by numpy.core, numpy.linalg.linalg
+missing module named numpy.core.broadcast - imported by numpy.core, numpy.linalg.linalg
+missing module named numpy.core.inexact - imported by numpy.core, numpy.linalg.linalg
+missing module named numpy.core.transpose - imported by numpy.core, numpy.linalg.linalg
+missing module named numpy.core.product - imported by numpy.core, numpy.linalg.linalg
+missing module named numpy.core.empty_like - imported by numpy.core, numpy.linalg.linalg
+missing module named numpy.core.empty - imported by numpy.core, numpy.linalg.linalg, numpy.fft.helper, numpy.testing.utils
+missing module named numpy.core.ravel - imported by numpy.core, numpy.linalg.linalg
+missing module named numpy.core.rollaxis - imported by numpy.core, numpy.linalg.linalg
+missing module named numpy.core.zeros - imported by numpy.core, numpy.linalg.linalg, numpy.fft.fftpack, numpy.testing.utils
+missing module named numpy.core.add - imported by numpy.core, numpy.linalg.linalg
+missing module named numpy.core.errstate - imported by numpy.core, numpy.linalg.linalg, numpy.testing.utils
+missing module named numpy.core.sqrt - imported by numpy.core, numpy.linalg.linalg
+missing module named numpy.core.cdouble - imported by numpy.core, numpy.linalg.linalg
+missing module named numpy.core.sum - imported by numpy.core, numpy.linalg.linalg
+missing module named numpy.core.size - imported by numpy.core, numpy.linalg.linalg
+missing module named numpy.core.array - imported by numpy.core, numpy.linalg.linalg, numpy.testing.utils
+missing module named numpy.core.single - imported by numpy.core, numpy.linalg.linalg
+missing module named numpy.core.fastCopyAndTranspose - imported by numpy.core, numpy.linalg.linalg
+missing module named numpy.core.longdouble - imported by numpy.core, numpy.linalg.linalg
+missing module named numpy.core.csingle - imported by numpy.core, numpy.linalg.linalg
+missing module named numpy.core.intc - imported by numpy.core, numpy.linalg.linalg
+missing module named numpy.core.all - imported by numpy.core, numpy.linalg.linalg, numpy.testing.utils
+missing module named numpy.core.ndarray - imported by numpy.core, numpy.lib.utils, numpy.testing.utils
+missing module named numpy.core.ufunc - imported by numpy.core, numpy.lib.utils
+missing module named numpy.core.asarray - imported by numpy.core, numpy.lib.utils, numpy.linalg.linalg, numpy.fft.fftpack, numpy.fft.helper
+missing module named numpy.core.iinfo - imported by numpy.core, numpy.lib.twodim_base
+missing module named numpy.core.atleast_2d - imported by numpy.core, numpy.lib.function_base
+missing module named numpy.core.linspace - imported by numpy.core, numpy.lib.function_base
+missing module named numpy.core.atleast_1d - imported by numpy.core, numpy.lib.function_base, numpy.lib.polynomial
+missing module named numpy.ndarray - imported by numpy, numpy.ma.core, numpy.ma.extras, numpy.ma.mrecords, IPython.core.magics.namespace, numpy.ctypeslib
+missing module named numpy.recarray - imported by numpy, numpy.ma.mrecords
+missing module named numpy.array - imported by numpy, numpy.ma.core, numpy.ma.extras, numpy.ma.mrecords, numpy.ctypeslib
+missing module named numpy.bool_ - imported by numpy, numpy.ma.core, numpy.ma.mrecords
+missing module named numpy.dtype - imported by numpy, numpy.ma.mrecords, numpy.ctypeslib
+missing module named 'urllib.error' - imported by setuptools.compat, numpy.lib._datasource
+missing module named 'urllib.request' - imported by matplotlib, setuptools.compat, IPython.utils.openpy, IPython.core.extensions, IPython.html.nbextensions, IPython.core.magics.code, matplotlib.finance, IPython.core.interactiveshell, IPython.core.display, numpy.lib._datasource, pygments.lexers._php_builtins, pygments.lexers._postgres_builtins, pygments.lexers._lua_builtins, pygments.lexers._sourcemod_builtins
+missing module named numpy.histogramdd - imported by numpy, numpy.lib.twodim_base
+missing module named numpy.lib.i0 - imported by numpy.lib, numpy.dual
+missing module named numpy.lib.iscomplexobj - imported by numpy.lib, numpy.testing.utils
+missing module named numpy.lib.imag - imported by numpy.lib, numpy.testing.utils
+missing module named numpy.lib.real - imported by numpy.lib, numpy.testing.utils
+missing module named numpy.lib.asfarray - imported by numpy.lib, numpy.linalg.linalg
+missing module named numpy.lib.triu - imported by numpy.lib, numpy.linalg.linalg
+missing module named numpy.eye - imported by numpy, numpy.core.numeric
+missing module named numpy.random.randn - imported by numpy.random, scipy
+missing module named numpy.random.rand - imported by numpy.random, scipy
+missing module named numpy.expand_dims - imported by numpy, numpy.ma.core
+missing module named numpy.iscomplexobj - imported by numpy, numpy.ma.core
+missing module named numpy.amax - imported by numpy, numpy.ma.core
+missing module named numpy.amin - imported by numpy, numpy.ma.core
+missing module named matplotlib.tri.Triangulation - imported by matplotlib.tri, matplotlib.tri.trifinder, matplotlib.tri.tritools, matplotlib.tri.triinterpolate, matplotlib.mlab
+missing module named numpy.isinf - imported by numpy, matplotlib.mathtext
+missing module named numpy.inf - imported by numpy, matplotlib.mathtext
+missing module named six.moves.filter - imported by six.moves, matplotlib.type1font
+missing module named sgi - imported by pty
+missing module named pexpect - imported by IPython.external.pexpect
+missing module named simplegeneric - imported by IPython.external.simplegeneric
+missing module named _structseq - imported by coverage.control
+missing module named IPython.config.LoggingConfigurable - imported by IPython.config, IPython.kernel.comm.manager, IPython.kernel.comm.comm
+missing module named IPython.config.Configurable - imported by IPython.config, IPython.kernel.connect, IPython.kernel.zmq.datapub
+missing module named IPython.config.Application - imported by IPython.config, IPython.utils.pickleutil
+missing module named path - imported by IPython.external.path
+missing module named gi - imported by IPython.lib.inputhookgtk3
+missing module named pyglet - imported by IPython.lib.inputhookpyglet
+missing module named glut_support - imported by IPython.lib.inputhook
+missing module named OpenGL.GL.glGetIntegerv - imported by OpenGL.GL, OpenGL.raw.GL._lookupint, OpenGL.GL.pointers
+missing module named numpy.frombuffer - imported by numpy, OpenGL.arrays.vbo, IPython.utils.pickleutil
+missing module named OpenGL.platform.CurrentContextIsValid - imported by OpenGL.platform, OpenGL.GLUT.special
+missing module named OpenGL.platform.GLUT_GUARD_CALLBACKS - imported by OpenGL.platform, OpenGL.GLUT.special
+missing module named OpenGL.platform.createBaseFunction - imported by OpenGL.platform, OpenGL.GLU.quadrics, OpenGL.GLU.tess
+missing module named OpenGL.platform.PLATFORM - imported by OpenGL.platform, OpenGL.raw.GL._types, OpenGL.GLU.quadrics, OpenGL.raw.GL._errors, OpenGL.GLU.tess, OpenGL.GLU.glunurbs, OpenGL.GLUT.special
+missing module named gobject - imported by matplotlib.pyplot, IPython.lib.inputhookgtk, IPython.kernel.zmq.gui.gtkembed
+missing module named appnope - imported by IPython.external.appnope
+missing module named ElementC14N - imported by xml.etree.ElementTree
+missing module named pydb - imported by IPython.core.debugger, IPython.core.interactiveshell
+missing module named pysqlite2 - imported by IPython.core.history
+missing module named _imaging_gif - imported by PIL.GifImagePlugin
+missing module named setuptools_svn - imported by setuptools.command.egg_info
+missing module named cffi._pycparser - imported by cffi, cffi.cparser
+missing module named testing - imported by cffi.recompiler
+missing module named PIL._imagingagg - imported by PIL, PIL.ImageDraw
+missing module named 'pydb.fns' - imported by IPython.core.debugger
+missing module named zmq.backend.strerror - imported by zmq.backend, zmq.error
+missing module named zmq.backend.zmq_errno - imported by zmq.backend, zmq.error
+missing module named zmq.backend.constants - imported by zmq.backend, zmq.sugar.constants
+missing module named zmq.QUEUE - imported by zmq, zmq.devices.basedevice
+missing module named zmq.PUB - imported by zmq, zmq.devices.monitoredqueuedevice
+missing module named zmq.device - imported by zmq, zmq.devices, zmq.devices.basedevice
+missing module named zmq.backend.zmq_poll - imported by zmq.backend, zmq.sugar.poll
+missing module named pyczmq - imported by zmq.sugar.context
+missing module named zmq.backend.Context - imported by zmq.backend, zmq.sugar.context
+missing module named zmq.backend.Frame - imported by zmq.backend, zmq.sugar.frame, zmq.sugar.tracker
+missing module named zmq.backend.zmq_version_info - imported by zmq.backend, zmq.sugar.version
+missing module named zmq.backend.Socket - imported by zmq.backend, zmq.sugar.socket
+missing module named zmq.zmq_version_info - imported by zmq, zmq.error
+missing module named zmq.zmq_version - imported by zmq, zmq.error
+missing module named zmq.ETERM - imported by zmq, zmq.error, zmq.devices.basedevice, zmq.eventloop.ioloop
+missing module named zmq.EAGAIN - imported by zmq, zmq.error
+missing module named monotime - imported by tornado.platform.auto, zmq.eventloop.minitornado.platform.auto
+missing module named _winapi - imported by IPython.kernel.zmq.parentpoller, IPython.kernel.launcher
+missing module named numpy.ascontiguousarray - imported by numpy, IPython.utils.pickleutil
+missing module named dill - imported by IPython.utils.pickleutil
+missing module named numarray - imported by IPython.parallel.client.map, numpy.distutils.system_info
+missing module named Numeric - imported by IPython.parallel.client.map, numpy.distutils.system_info
+missing module named roman - imported by docutils.writers.manpage, docutils.writers.latex2e
+missing module named pygments.formatters.TerminalFormatter - imported by pygments.formatters, pygments.cmdline
+missing module named ctags - imported by pygments.formatters.html
+missing module named pygments.lexers.TextLexer - imported by pygments.lexers, pygments.cmdline
+missing module named Image - imported by docutils.writers.html4css1, docutils.writers.odf_odt, docutils.parsers.rst.directives.images
+missing module named elementtree - imported by docutils.writers.odf_odt
+missing module named gssapi - imported by paramiko.ssh_gss
+missing module named IPython.kernel.connect_qtconsole - imported by IPython.kernel, IPython.kernel.zmq.zmqshell
+missing module named IPython.kernel.get_connection_file - imported by IPython.kernel, IPython.kernel.zmq.zmqshell
+missing module named IPython.kernel.get_connection_info - imported by IPython.kernel, IPython.kernel.zmq.zmqshell
+missing module named IPython.kernel.launch_kernel - imported by IPython.kernel, IPython.kernel.manager
+missing module named IPython.kernel.make_ipkernel_cmd - imported by IPython.kernel, IPython.kernel.manager
+missing module named IPython.kernel.write_connection_file - imported by IPython.kernel, IPython.kernel.zmq.kernelapp
+missing module named PyQt5 - imported by matplotlib.pyplot, matplotlib.backends.qt_compat
+missing module named matplotlib.backends._macosx - imported by matplotlib.backends, matplotlib.backends.backend_macosx
+missing module named six.moves.reduce - imported by six.moves, matplotlib.axes._axes, ecdsa.numbertheory, mpl_toolkits.mplot3d.axes3d
+missing module named matplotlib.axes.Axes - imported by matplotlib.axes, matplotlib.pyplot, matplotlib.legend, matplotlib.projections.geo, matplotlib.projections.polar, matplotlib.figure, mpl_toolkits.mplot3d.axes3d
+missing module named matplotlib.axes.Subplot - imported by matplotlib.axes, matplotlib.pyplot
+missing module named matplotlib.axes.SubplotBase - imported by matplotlib.axes, matplotlib.gridspec, matplotlib.figure
+missing module named 'mpl_toolkits.natgrid' - imported by matplotlib.mlab
+missing module named six.moves.map - imported by six.moves, matplotlib.patches, matplotlib.mlab, matplotlib.afm, matplotlib.axes._subplots, matplotlib.backends.backend_pdf, mpl_toolkits.mplot3d.axes3d
+missing module named 'numpy_distutils.cpuinfo' - imported by numpy.f2py.diagnose
+missing module named 'numpy_distutils.fcompiler' - imported by numpy.f2py.diagnose
+missing module named 'Pyrex.Compiler' - imported by numpy.distutils.command.build_src
+missing module named Pyrex - imported by numpy.distutils.command.build_src
+missing module named 'numpy_distutils.command' - imported by numpy.f2py.diagnose
+missing module named numpy_distutils - imported by numpy.f2py.diagnose
+missing module named __svn_version__ - imported by numpy.f2py.__version__
+missing module named __config__ - imported by numpy.distutils
+missing module named six.moves.zip - imported by six.moves, matplotlib.cbook, matplotlib.colors, matplotlib.patches, matplotlib.widgets, matplotlib.mlab, matplotlib.collections, matplotlib.text, matplotlib.textpath, matplotlib.gridspec, matplotlib.axes._axes, matplotlib.dates, matplotlib.colorbar, matplotlib.offsetbox, matplotlib.legend_handler, matplotlib.finance, mpl_toolkits.mplot3d.axes3d, mpl_toolkits.mplot3d.art3d, mpl_toolkits.mplot3d.proj3d
+missing module named six.moves.xrange - imported by six.moves, matplotlib.cbook, matplotlib.hatch, matplotlib.backend_bases, matplotlib.mlab, matplotlib.contour, matplotlib.markers, matplotlib.dviread, matplotlib.axes._axes, matplotlib.dates, matplotlib.colorbar, matplotlib.backends.backend_svg, matplotlib.legend, matplotlib.offsetbox, matplotlib.stackplot, matplotlib.streamplot, matplotlib.table, matplotlib.axes._base, matplotlib.tri.triinterpolate, matplotlib.finance, matplotlib.backends.qt_editor.formlayout, mpl_toolkits.mplot3d.axes3d, matplotlib.backends.backend_wx
+runtime module named six.moves - imported by matplotlib.cbook, matplotlib.colors, unittest2.case, unittest2.result, matplotlib.hatch, matplotlib.patches, matplotlib.backend_bases, matplotlib.widgets, matplotlib.mlab, dateutil.tzwin, dateutil.rrule, matplotlib.contour, matplotlib.collections, matplotlib.font_manager, matplotlib.afm, matplotlib.text, matplotlib.markers, matplotlib.textpath, matplotlib.dviread, matplotlib.axes._subplots, matplotlib.gridspec, matplotlib.axes._axes, matplotlib.dates, matplotlib.colorbar, matplotlib.backends.backend_pdf, matplotlib.type1font, matplotlib.backends.backend_svg, matplotlib.legend, matplotlib.offsetbox, matplotlib.legend_handler, matplotlib.stackplot, matplotlib.streamplot, matplotlib.table, matplotlib.axes._base, matplotlib.tri.triinterpolate, matplotlib.finance, ecdsa.numbertheory, matplotlib.backends.qt_editor.formlayout, mpl_toolkits.mplot3d.axes3d, mpl_toolkits.mplot3d.art3d, mpl_toolkits.mplot3d.proj3d, matplotlib.backends.backend_tkagg, matplotlib.backends.tkagg, matplotlib.backends.backend_wx, matplotlib.backends.backend_ps

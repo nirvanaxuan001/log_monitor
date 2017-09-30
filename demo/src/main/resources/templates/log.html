@@ -1,0 +1,396 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>PS监控Demo</title>
+
+    <style type="text/css">
+        .label {
+            display: block;
+            margin: 0px 0px 5px;
+        }
+        .input{
+            color: #555;
+            height: 30px;
+            line-height:15px;
+            width: 100%;
+            padding: 0px 0px 0px 10px;
+            margin-top: 2px;
+            border: 1px solid #E5E5E5;
+            background: #FBFBFB;
+            outline: 0;
+            -webkit-box-shadow: inset 1px 1px 2px rgba(238, 238, 238, 0.2);
+            box-shadow: inset 1px 1px 2px rgba(238, 238, 238, 0.2);
+            font: normal 14px/14px Arial, Helvetica, sans-serif;
+        }
+        #from #to{width:40%}
+        .button {
+            display: inline-block;
+            background-color: #9DC45F;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-border-radius: 5px;
+            border: none;
+            padding: 10px 25px 10px 25px;
+            color: #FFF;
+            text-shadow: 1px 1px 1px #949494;
+            margin: 10px 10px 10px 10px;
+        }
+        .button:hover {
+            background-color:#80A24A;
+        }
+        .logo{float:left;padding-left:10px;padding-top: 10px;padding-right: 20px}
+        .logo a:link, a:visited{ text-decoration: none; color:#FFF;}
+        #logo{display:inline; height:60px;font-size: 30px;font-weight: bold;}
+        .hid{ display:none;}
+        ul#nav{ width:100%; height:60px; background:#9DC45F;margin:0 auto}
+        ul#nav li{display:inline; height:60px}
+        ul#nav li a{display:inline-block; padding:0 20px; height:60px; line-height:60px;
+            color:#FFF; font-family:"\5FAE\8F6F\96C5\9ED1"; font-size:16px}
+        ul#nav li a:hover{background:#80A24A}
+        a{
+            text-decoration:none;
+            text-shadow: 1px 1px 1px #949494;
+            font-weight: bold;
+        }
+        .box{ float:left; position:relative; padding:1px; top:10%;  opacity:0.5;z-index:4;  opacity:1; }
+        .box_bg{}
+        .box2{ width:100%; height:100%; margin:0 auto; display:none; z-index:5; position:fixed; background:rgba(0, 0, 0, 0.52) none repeat scroll 0% 0%; opacity:1;}
+        .new{ width:380px; height:65px; background:#9DC45F; text-align:center; position:relative; margin:150px auto 0px auto;border-radius:8px 8px 0px 0px;}
+        .new h2{ font-size:30px; line-height:65px; color:#ffffff;}
+        .new a{position:absolute;font-size:30px;font-weight: bold;color:#fff;width:16px; height:16px; right:20px; top:10px;}
+        .new1{ width:300px; padding:40px 40px 50px; margin:0 auto; background:#EFEFEF; border-radius:0px 0px 8px 8px;}
+        .new1left1{ width:100%; margin-bottom:22px; /*float:left;*/ position:relative; display:block;}
+        .new1left1 textarea{width:296px; color:#999; font-size:13px; height:200px; line-height:40px; border:1px solid #999; border-radius:5px;}
+        .new1left2{ height:45px; line-height:45px; width:100%; margin-top:22px;/* float:left;*/ position:relative; display:block;}
+        .new1left2 .submit{/* float:left; */width:97px; height:45px; line-height:45px; text-align:center;border-radius:5px; display:inline-block; font-size:14px; outline:medium none;}
+        .cancel{width:97px; height:45px; line-height:45px; text-align:center;border-radius:5px; display:inline-block; font-size:14px; outline:medium none;}
+        .submit:hover{
+            background:none repeat scroll 0% 0% #80A24A;
+            text-decoration: none;
+            color:#fff; border-radius:5px;font-size:14px; outline:medium none;
+        }
+        .cancel:hover{
+            background:none repeat scroll 0% 0% #80A24A;
+            text-decoration: none;
+            color:#fff; border-radius:5px;font-size:14px; outline:medium none;
+        }
+        .logo{float:left;padding-left:10px;padding-top: 10px;padding-right: 20px}
+        .logo a:link, a:visited{ text-decoration: none; color:#FFF;}
+        #logo{display:inline; height:60px;font-size: 30px;font-weight: bold;}
+        .hid{ display:none;}
+        .content {
+            position: relative;
+            width:auto;
+            margin:0px 100px 0px 100px;
+            background-color:rgba(133,133,133,0.7);
+            height: 100%;
+        }
+        .imglist{
+            width: 800px;
+            border:1px solid #ffffff;   /* 表格边框 */
+            font-family:Arial;
+            border-collapse:collapse;   /* 边框重叠 */
+            background-color:#eaf5ff;   /* 表格背景色 */
+            font-size:14px;
+            text-align: center;
+        }
+        .imglist th{
+            border:1px solid #ffffff;   /* 行名称边框 */
+            background-color:#9DC45F;   /* 行名称背景色 */
+            color:#FFFFFF;              /* 行名称颜色 */
+            font-weight:bold;
+            padding-top:4px; padding-bottom:4px;
+            padding-left:12px; padding-right:12px;
+            text-align:center;
+        }
+        .file {
+            position: relative;
+            display: inline-block;
+            background: #9DC45F;
+            border-radius: 4px;
+            padding: 4px 12px;
+            overflow: hidden;
+            color: #9DC45F;
+            text-decoration: none;
+            text-indent: 0;
+            line-height: 20px;
+        }
+        .file input {
+            position: absolute;
+            font-size: 100px;
+            right: 0;
+            top: 0;
+            opacity: 0;
+        }
+        .file:hover {
+            background: #80A24A;
+            color: #fff;
+            text-decoration: none;
+        }
+        .ta{border:0;
+            background-color:transparent;
+            height: auto;
+            width: 100%;
+            margin-left: 5px;
+            margin-right: 5px;
+            resize : none;
+        }
+    </style>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/highcharts.js"></script>
+    <script th:inline="javascript">
+        $(function () {
+            var DATA = [];
+            var LINE = [];
+            function draw() {
+                $device =$("#udid").find("option:selected").text();
+                $member =$("#member").find("option:selected").text();
+                $from =$("#from").val();
+                $to =$("#to").val();
+                Highcharts.setOptions({
+                    global: {
+                        useUTC: false
+                    }
+                });
+
+                var chart;
+                $('#container').highcharts({
+                    chart: {
+                        type: 'spline',
+                        animation: Highcharts.svg, // don't animate in old IE
+                        marginRight: 10,
+                        events: {
+                            load: function() {
+                            console.log(this.series);
+
+                                // set up the updating of the chart each second
+//                                var series = this.series[0];
+//                                setInterval(
+//                                    function(){
+//                                        $.ajax({
+//                                            url:"/getLatestData",
+//                                            data:{"device":$device,"member":$member},
+//                                            type:"GET",
+//                                            dataType:"json",
+//                                            async:false,
+//                                            success:function(argument) {
+//                                                var ajaxobj = eval(argument);
+//                                                var x =(new Date()).getTime(),
+//                                                    y = eval(ajaxobj.value);
+//                                                series.addPoint([x,y],true,true)
+//                                            }});
+//                                    },$freq*1000);
+                            }
+                        }
+                    },
+                    title: {
+                        text: $device+"的数据",
+                    },
+                    xAxis: {
+                        type: 'datetime',
+                        tickPixelInterval: 200
+                    },
+                    yAxis: {
+                        title: {
+                            text: "数值"
+                        },
+                        plotLines: LINE
+                    },
+                    tooltip: {
+                        formatter: function() {
+                            return '<b>'+ this.series.name +'</b><br/>'+
+                                Highcharts.dateFormat('%Y-%m-%d %H:%M:%S', this.x) +'<br/>'+
+                                Highcharts.numberFormat(this.y, 2);
+                        }
+                    },
+                    legend: {
+                        enabled: true
+                    },
+                    exporting: {
+                        enabled: false
+                    },
+                    series: DATA
+                });
+            }
+            $(document).ready(function() {
+                $("#udid").bind("change",function(){
+                    $from =Date.parse($("#from").val());
+                    $to =Date.parse($("#to").val());
+                    $value =$("#udid").find("option:selected").text();
+                    $.ajax({
+                        type: "get",
+                        url: "/getMemberByDeviceRecently",
+                        data:{"device":$value,"time":$from,"end":$to},
+                        dataType: "json",
+                        success: function (json) {
+                            $("#member").empty();
+                            var $devices = eval(json);
+                            $.each($devices,function(index,element){
+                                $("#member").append("<input type='checkbox' value='"+element+"'/>"+element);
+                            })
+                        }
+                    })
+                });
+                $("#udid").bind("focus",function(){
+                    $from =Date.parse($("#from").val());
+                    $to =Date.parse($("#to").val());
+                    $.ajax({
+                        type: "get",
+                        url: "/getDeviceRecently",
+                        data:{"time":$from,"end":$to},
+                        dataType: "json",
+                        success: function (json) {
+                            $("#udid").empty();
+                            $("#udid").append("<option value=''>请选择</option>");
+                            var $devices = eval(json);
+                            $.each($devices,function(index,element){
+                                $("#udid").append("<option value='"+element+"'>"+element+"</option>");
+                            })
+                        }
+                    })
+                });
+                $("#draw").bind("click",function () {
+                    var device =$("#udid").find("option:selected").text();
+                    var start =Date.parse($("#from").val());
+                    var end =Date.parse($("#to").val());
+                    DATA=[];
+                    LINE=[];
+                    console.log("in draw")
+                    if(device!="请选择"){
+                        var $value = $("#member input[type=checkbox]:checked");
+                        $.each($value,function (index,element) {
+                            var member = element.value;
+                            console.log("before ajax"+member);
+                            $.ajax({
+                                type:"post",
+                                url:"/getDataByRange",
+                                contentType: "application/json",
+                                data:JSON.stringify({"udid":device,"name":member,"time":start,"end":end}),
+                                dataType:"json",
+                                async:false,
+                                success:function (json) {
+                                    console.log("in ajax",json);
+                                    if(json!=null) {
+                                        var plot_data = eval(json);
+                                        var dict = {};
+                                        dict["name"] = member;
+                                        dict["data"] = plot_data;
+                                        DATA.push(dict);
+                                        var line_style ={};
+                                        line_style["width"]=1;
+                                        LINE.push(line_style);
+                                    }
+                                }
+                            })
+                        });
+                        draw();
+                    }
+                })
+                $('#newImage').click(function(){
+                    $('.box2').show();
+                });
+                $('.new a').click(function(){
+                    $('.box2').hide();
+                });
+                $('#button_submit').click(function(){
+                    $("#newimageform").submit();
+                });
+                $('#cancel').click(function(){
+                    $('.box2').hide();
+                });
+                $("#input_file").bind("change",function(){
+                    $("#parse").val($("#input_file").val())
+                })
+                $("#input_log").bind("change",function(){
+                    $("#log").val($("#input_log").val())
+                })
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="box">
+    <div class="box2">
+        <div class="new">
+            <h2>上传文件</h2>
+            <a class="close">X</a>
+        </div>
+        <div class="new1">
+            <form name="newimageform" id="newimageform" action="/upload" method="post" enctype="multipart/form-data">
+                <div class="new1left">
+                    <span></span>
+                    <div class="new1left1">
+                        <label for="seek">添加解码文件:</label>
+                        <a href="" class="file" id="seek">浏览
+                            <input type="file" name="parse_file" id="input_file"/>
+                        </a>
+                        <input type="text" value="" id="parse" class="input">
+                    </div>
+                    <div class="new1left1">
+                        <label for="seek">添加日志文件:</label>
+                        <a href="" class="file" id="seek_log">浏览
+                            <input type="file" name="log_file" id="input_log"/>
+                        </a>
+                        <input type="text" value="" id="log" class="input">
+                    </div>
+                    <div>
+                        <label for="input_udid">输入日志标识:</label>
+                        <input type="txt" id="input_udid" name="input_udid" class="input">
+                    </div>
+                    <div id="respond">
+                        <p></p>
+                    </div>
+                    <div class="new1left2">
+                        <a class="submit" id="button_submit">上传</a>
+                        <a class="cancel" id="cancel">取消</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div>
+    <div id="headbar" class="g-hdc">
+        <div class="m-nav" id="topbar">
+            <div class="logo"><a id="logo" href="" >PS DEMO</a></div>
+            <ul id="nav">
+                <li class="">
+                    <a href="/" class="indexpage">实时</a>
+                </li>
+                <li class="">
+                    <a href="/log">指定区间</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+        <label class ="label" >
+            选择查询时间：
+        </label>
+    <label for="from">从</label><input type="datetime-local" id="from"  class="input" value="2017-01-01T00:00"/>
+    <label for="to">到</label><input type="datetime-local" id="to" class="input" value="2017-01-01T00:00"/>
+        <label for="udid" class ="label">
+            请先选择设备：
+        </label>
+        <select name="udid_select" id="udid" class="input">
+            <option value="">请选择</option>
+        </select>
+        <label class="member label">选择绘制对象</label>
+        <div id = "member">
+        </div>
+    <a id="draw" class ="button">重绘</a>
+    <a class="button" id="newImage" style="margin: 20px;">导入日志</a>
+    </div>
+<div id="container" style="width:1280px;height:720px;margin:0 auto;" data-highcharts-chart="0">
+    <div class="highcharts-container" id="highcharts-0" style="position: relative; overflow: hidden; width: 700px; height: 400px; text-align: left; line-height: normal; z-index: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+        <svg version="1.1">
+            <desc>PS Demo</desc>
+            <defs>
+                <clippath id="highcharts-1">
+                    <rect x="0" y="0" width="1280" height="720"></rect>
+                </clippath>
+            </defs>
+        </svg>
+    </div>
+</div>
+</body>
+</html>

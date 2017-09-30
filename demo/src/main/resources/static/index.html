@@ -1,0 +1,168 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>PS监控Demo</title>
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/highcharts.js"></script>
+<script th:inline="javascript">
+  $(function () {
+    function draw() {
+        $device =$("#udid").find("option:selected").text();
+        $member =$("#member").find("option:selected").text();
+        Highcharts.setOptions({
+            global: {
+                useUTC: false
+            }
+        });
+
+        var chart;
+        $('#container').highcharts({
+            chart: {
+                type: 'spline',
+                animation: Highcharts.svg, // don't animate in old IE
+                marginRight: 10,
+                events: {
+                    load: function() {
+
+                        // set up the updating of the chart each second
+                        var series = this.series[0];
+                        setInterval(
+                            function(){
+                                $.ajax({
+                                    url:"/getLatestData",
+                                    data:{"device":$device,"member":$member},
+                                    type:"GET",
+                                    dataType:"json",
+                                    async:false,
+                                    success:function(argument) {
+                                        var ajaxobj = eval(argument);
+                                        var x =(new Date()).getTime(),
+                                            y = eval(ajaxobj.value);
+                                        series.addPoint([x,y],true,true)
+                                    }});
+                            },5000);
+                    }
+                }
+            },
+            title: {
+                text: "设备"+$device+"的"+$member+"属性趋势图"
+            },
+            xAxis: {
+                type: 'datetime',
+                tickPixelInterval: 200
+            },
+            yAxis: {
+                title: {
+                    text: $member
+                },
+                plotLines: [{
+                    value: 0,
+                    width: 1,
+                    color: '#808080'
+                }]
+            },
+            tooltip: {
+                formatter: function() {
+                    return '<b>'+ this.series.name +'</b><br/>'+
+                        Highcharts.dateFormat('%Y-%m-%d %H:%M:%S', this.x) +'<br/>'+
+                        Highcharts.numberFormat(this.y, 2);
+                }
+            },
+            legend: {
+                enabled: false
+            },
+            exporting: {
+                enabled: false
+            },
+            series: [{
+                name: $member,
+                data: (function(){
+                    var data = [],
+                        time = (new Date()).getTime(),
+                        i;
+
+                    for (i = -49; i <= 0; i++) {
+                        data.push({
+                            x: time + i * 5000,
+                            y: 0
+                        });
+                    }
+                    return data;
+                })()
+            }]
+        });
+    }
+  $(document).ready(function() {
+    $("#udid").bind("change",function(){
+        $value =$("#udid").find("option:selected").text();
+        $.ajax({
+            type: "get",
+            url: "/getMemberByDevice",
+            data:"device="+$value,
+            dataType: "json",
+            success: function (json) {
+                $("#member").empty();
+                $("#member").append("<option value=''>请选择</option>");
+                var $devices = eval(json);
+                $.each($devices,function(index,element){
+                    $("#member").append("<option value='"+element+"'>"+element+"</option>");
+                })
+            }
+        })
+    });
+    $("#udid").bind("focus",function(){
+        $.ajax({
+            type: "get",
+            url: "/getDevice",
+            dataType: "json",
+            success: function (json) {
+                $("#udid").empty();
+                $("#udid").append("<option value=''>请选择</option>");
+                var $devices = eval(json);
+                $.each($devices,function(index,element){
+                    $("#udid").append("<option value='"+element+"'>"+element+"</option>");
+                })
+            }
+        })
+    });
+    $("#member").bind("change",function(){
+        draw();
+    });
+  });
+  });
+</script>
+</head>
+
+<body>
+<div>
+  <div>
+    <label for="udid">
+      请先选择设备：
+    </label>
+    <select name="udid_select" id="udid">
+      <option value="">请选择</option>
+    </select>
+  </div>
+  <div>
+    <label for="member">
+      选择监控项：
+    </label>
+    <select name="member_select" id="member">
+      <option value="">请选择</option>
+    </select>
+  </div>
+</div>
+<div id="container" style="width:1280px;height:720px;margin:0 auto;" data-highcharts-chart="0">
+<div class="highcharts-container" id="highcharts-0" style="position: relative; overflow: hidden; width: 700px; height: 400px; text-align: left; line-height: normal; z-index: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+  <svg version="1.1">
+    <desc>PS Demo</desc>
+    <defs>
+      <clippath id="highcharts-1">
+        <rect x="0" y="0" width="1280" height="720"></rect>
+      </clippath>
+    </defs>
+</svg>
+</div>
+</div>
+</body>
+</html>
